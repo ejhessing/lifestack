@@ -7,7 +7,7 @@
     "knex": "knex",
     "start": "node-inspector --web-port=8888 & nodemon --debug server.js",
     "test": "tape 'tests/**/*.test.js' -r babel-register | tap-spec",
-    "heroku-postbuild": "npm run knex migrate:latest"
+    "heroku-postbuild": "npm run knex migrate:latest npm run knex seed:run"
   },
   "repository": {
     "type": "git",
